@@ -52,6 +52,12 @@ const float Rp=10000.0; //10K
 const float T2 = (273.15+25.0);;//T2
 const float Bx = 3950.0;//B
 const float Ka = 273.15;
+char DisplayCache1[16];
+char DisplayCache2[16];
+char DisplayCache3[16];
+char DisplayCache4[16];
+int frame;
+int UART=1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -60,11 +66,6 @@ static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
 static void MX_USART1_UART_Init(void);
-char DisplayCache1[16];
-char DisplayCache2[16];
-char DisplayCache3[16];
-char DisplayCache4[16];
-
 /* USER CODE BEGIN PFP */
 float GetTemp(float Rt)
 {
@@ -82,6 +83,7 @@ float GetTemp(float Rt)
 
 void RunMode(int mode)
 {
+	char TxCache[16];
 	if(mode == 1)//ADC
 	{
 		OLED_ShowChinese(0,0,2,16);
@@ -89,7 +91,13 @@ void RunMode(int mode)
 		OLED_ShowChinese(32,0,4,16);
 		OLED_ShowString(30,20,DisplayCache1,24);
 		OLED_ShowString(96,27,"ADC",16);
-
+		OLED_ShowString(0,52,"UART OFF",12);
+		if(UART)
+		{
+			OLED_ShowString(0,52,"UART  ON",12);
+			sprintf(TxCache,"%s\r\n",DisplayCache1);
+			HAL_UART_Transmit(&huart1,TxCache,6,100);
+		}
 	}
 	if(mode == 2)//Volt
 	{
@@ -97,6 +105,13 @@ void RunMode(int mode)
 		OLED_ShowChinese(16,0,6,16);
 		OLED_ShowString(30,20,DisplayCache2,24);
 		OLED_ShowString(96,27,"V",16);
+		OLED_ShowString(0,52,"UART OFF",12);
+		if(UART)
+		{
+			OLED_ShowString(0,52,"UART  ON",12);
+			sprintf(TxCache,"%s\r\n",DisplayCache2);
+			HAL_UART_Transmit(&huart1,TxCache,7,100);
+		}
 	}
 
 	if(mode == 3)//Register
@@ -105,6 +120,13 @@ void RunMode(int mode)
 		OLED_ShowChinese(16,0,4,16);
 		OLED_ShowString(30,20,DisplayCache3,24);
 		OLED_ShowChinese(96,27,8,16);
+		OLED_ShowString(0,52,"UART OFF",12);
+		if(UART)
+		{
+			OLED_ShowString(0,52,"UART  ON",12);
+			sprintf(TxCache,"%s\r\n",DisplayCache3);
+			HAL_UART_Transmit(&huart1,TxCache,6,100);
+		}
 
 	}
 	if(mode == 4)//Temp
@@ -114,6 +136,13 @@ void RunMode(int mode)
 		OLED_ShowString(30,20,DisplayCache4,24);
 		OLED_ShowChinese(96,27,9,16);
 		OLED_ShowChar(104,27,'C',16);
+		OLED_ShowString(0,52,"UART OFF",12);
+		if(UART)
+		{
+			OLED_ShowString(0,52,"UART  ON",12);
+			sprintf(TxCache,"%s\r\n",DisplayCache4);
+			HAL_UART_Transmit(&huart1,TxCache,7,100);
+		}
 	}
 }
 
@@ -158,6 +187,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	OLED_Init();
 	OLED_DisplayTurn(1);
+	OLED_ShowString(0,0,"Calibrating...",12);
 	OLED_Refresh();
 	int ADValue=0;
 	int ADSwitch=0;
@@ -167,9 +197,12 @@ int main(void)
 	int i=0;
 	int y=0;
 	int Refresh = 0;
+	HAL_ADCEx_Calibration_Start(&hadc1);
+	HAL_Delay(2000);
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_Start(&hadc2);
-	HAL_Delay(100);
+
+	HAL_NVIC_SetPriority(SysTick_IRQn,0,0U);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -216,8 +249,18 @@ int main(void)
 		 	 preMode = Mode;
 		 	 Mode = 4;
 	  }
+	  if(frame>0)
+	  {
+		  Mode = 5;
+		  OLED_ShowString(0,0,"Calibrate Success!",12);
+		  frame--;
+		  HAL_Delay(10);
+	  }
 	  RunMode(Mode);
+	  OLED_Refresh();
 
+
+	  
 
 
     /* USER CODE END WHILE */
@@ -428,10 +471,44 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
 }
 
 /* USER CODE BEGIN 4 */
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+
+	if(GPIO_Pin == S3_Pin)
+	{
+		UART = 1-UART;
+	}
+	if(GPIO_Pin == S4_Pin)
+	{
+		HAL_ADC_Stop(&hadc1);
+		OLED_Clear();
+		OLED_ShowString(0,0,"Calibrate ADC1",12);
+		OLED_Refresh();
+		HAL_ADCEx_Calibration_Start(&hadc1);
+		HAL_ADC_Start(&hadc1);
+
+		HAL_ADC_Stop(&hadc2);
+		OLED_ShowString(0,0,"Calibrate ADC2",12);
+		OLED_Refresh();
+		HAL_ADCEx_Calibration_Start(&hadc2);
+		HAL_ADC_Start(&hadc2);
+
+		OLED_Refresh();
+		frame = 20;
+	}
+
+}
 /* USER CODE END 4 */
 
 /**
