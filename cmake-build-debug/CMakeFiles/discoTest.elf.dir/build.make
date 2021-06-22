@@ -348,9 +348,22 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.s"
 	C:\PROGRA~2\GNUARM~1\102020~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ixuan\CLionProjects\discoTest\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c -o CMakeFiles\discoTest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c.s
 
+CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: CMakeFiles/discoTest.elf.dir/flags.make
+CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj: ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ixuan\CLionProjects\discoTest\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
+	C:\PROGRA~2\GNUARM~1\102020~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\discoTest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.obj -c C:\Users\ixuan\CLionProjects\discoTest\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c
+
+CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.i"
+	C:\PROGRA~2\GNUARM~1\102020~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ixuan\CLionProjects\discoTest\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c > CMakeFiles\discoTest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.i
+
+CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.s"
+	C:\PROGRA~2\GNUARM~1\102020~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ixuan\CLionProjects\discoTest\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c -o CMakeFiles\discoTest.elf.dir\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c.s
+
 CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj: CMakeFiles/discoTest.elf.dir/flags.make
 CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj: ../startup/startup_stm32f103xb.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ixuan\CLionProjects\discoTest\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building ASM object CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ixuan\CLionProjects\discoTest\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building ASM object CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj"
 	C:\PROGRA~2\GNUARM~1\102020~1\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\discoTest.elf.dir\startup\startup_stm32f103xb.s.obj -c C:\Users\ixuan\CLionProjects\discoTest\startup\startup_stm32f103xb.s
 
 # Object files for target discoTest.elf
@@ -376,6 +389,7 @@ discoTest_elf_OBJECTS = \
 "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj" \
 "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj" \
 "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj" \
+"CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj" \
 "CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj"
 
 # External object files for target discoTest.elf
@@ -402,10 +416,11 @@ discoTest.elf: CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm
 discoTest.elf: CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
 discoTest.elf: CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
 discoTest.elf: CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
+discoTest.elf: CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
 discoTest.elf: CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj
 discoTest.elf: CMakeFiles/discoTest.elf.dir/build.make
 discoTest.elf: CMakeFiles/discoTest.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\ixuan\CLionProjects\discoTest\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking C executable discoTest.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\ixuan\CLionProjects\discoTest\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable discoTest.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\discoTest.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/ixuan/CLionProjects/discoTest/cmake-build-debug/discoTest.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building C:/Users/ixuan/CLionProjects/discoTest/cmake-build-debug/discoTest.bin"

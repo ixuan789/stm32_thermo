@@ -45,6 +45,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" "C:/Users/ixuan/CLionProjects/discoTest/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
   "C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" "C:/Users/ixuan/CLionProjects/discoTest/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
   "C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" "C:/Users/ixuan/CLionProjects/discoTest/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
+  "C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" "C:/Users/ixuan/CLionProjects/discoTest/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

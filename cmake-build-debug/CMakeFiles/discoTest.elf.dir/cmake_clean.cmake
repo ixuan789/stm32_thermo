@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj"
   "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj"
   "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj"
+  "CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj"
   "CMakeFiles/discoTest.elf.dir/startup/startup_stm32f103xb.s.obj"
   "discoTest.elf"
   "discoTest.elf.manifest"

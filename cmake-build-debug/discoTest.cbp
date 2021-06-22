@@ -253,6 +253,9 @@
 		<Unit filename="C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
 			<Option target="discoTest.elf"/>
 		</Unit>
+		<Unit filename="C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h">
+			<Option target="discoTest.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
 			<Option target="discoTest.elf"/>
 		</Unit>
@@ -296,6 +299,9 @@
 			<Option target="discoTest.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option target="discoTest.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c">
 			<Option target="discoTest.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/ixuan/CLionProjects/discoTest/STM32F103C8Tx_FLASH.ld">

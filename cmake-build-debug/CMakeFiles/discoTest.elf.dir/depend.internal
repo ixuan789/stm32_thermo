@@ -36,10 +36,11 @@ CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/main.c
 CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj
- ../Core/Inc/OLED.h
  ../Core/Inc/main.h
+ ../Core/Inc/oled.h
  ../Core/Inc/oledfont.h
  ../Core/Inc/stm32f1xx_hal_conf.h
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
@@ -71,6 +72,7 @@ CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/oled.c
 CMakeFiles/discoTest.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  ../Core/Inc/main.h
@@ -104,6 +106,7 @@ CMakeFiles/discoTest.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/stm32f1xx_hal_msp.c
 CMakeFiles/discoTest.elf.dir/Core/Src/stm32f1xx_it.c.obj
  ../Core/Inc/main.h
@@ -138,6 +141,7 @@ CMakeFiles/discoTest.elf.dir/Core/Src/stm32f1xx_it.c.obj
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/stm32f1xx_it.c
 CMakeFiles/discoTest.elf.dir/Core/Src/syscalls.c.obj
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/syscalls.c
@@ -172,6 +176,7 @@ CMakeFiles/discoTest.elf.dir/Core/Src/system_stm32f1xx.c.obj
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/system_stm32f1xx.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -204,6 +209,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.ob
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -236,6 +242,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -268,6 +275,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -300,6 +308,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cort
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -332,6 +341,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -364,6 +374,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -396,6 +407,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flas
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -428,6 +440,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flas
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -460,6 +473,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -492,6 +506,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -524,6 +539,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -556,6 +572,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -588,6 +605,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -620,6 +638,7 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
 CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c.obj
  ../Core/Inc/stm32f1xx_hal_conf.h
@@ -652,4 +671,38 @@ CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+CMakeFiles/discoTest.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c.obj
+ ../Core/Inc/stm32f1xx_hal_conf.h
+ ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
+ ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
+ ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
+ ../Drivers/CMSIS/Include/cmsis_armcc.h
+ ../Drivers/CMSIS/Include/cmsis_armclang.h
+ ../Drivers/CMSIS/Include/cmsis_compiler.h
+ ../Drivers/CMSIS/Include/cmsis_gcc.h
+ ../Drivers/CMSIS/Include/cmsis_iccarm.h
+ ../Drivers/CMSIS/Include/cmsis_version.h
+ ../Drivers/CMSIS/Include/core_cm3.h
+ ../Drivers/CMSIS/Include/mpu_armv7.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+ C:/Users/ixuan/CLionProjects/discoTest/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
