@@ -243,7 +243,7 @@ int main(void)
 	  sprintf(DisplayCache3,"%.0f",fADValue*10000/(3.3-fADValue)); //Register
 	  sprintf(DisplayCache4,"%.2f", GetTemp(fADValue/((3.3-fADValue)/10000))); //Temp
 	  if(preMode != Mode)	OLED_Clear();
-	  if(ADValue/100 > 1800 && Emoji)
+	  if(ADValue/100 >1800 && Emoji && Mode<5 )
 	  {
 		  OLED_ShowChar(72,0,'(',16);
 		  OLED_ShowChinese(80,0,10,16);
@@ -251,7 +251,7 @@ int main(void)
 		  OLED_ShowChinese(106,0,10,16);
 		  OLED_ShowChar(122,0,')',16);
 	  }
-	  if(ADValue/100 < 1800 && Emoji)
+	  if(ADValue/100 <1800 && Emoji && Mode<5 )
 	  {
 		  OLED_ShowString(72,0,"(-",16);
 		  OLED_ShowChinese(88,10,10,16);
@@ -281,6 +281,7 @@ int main(void)
 	  if(frame>0)
 	  {
 		  Mode = 5;
+		  OLED_Refresh();
 		  OLED_ShowString(0,0,"Calibrate Success!",12);
 		  frame--;
 		  HAL_Delay(10);
@@ -586,7 +587,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : S2_Pin S3_Pin S4_Pin */
   GPIO_InitStruct.Pin = S2_Pin|S3_Pin|S4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : Red_Pin CS_Pin DC_Pin RES_Pin
@@ -626,16 +627,15 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	}
 	if(GPIO_Pin == S4_Pin)
 	{
-		HAL_ADC_Stop(&hadc1);
 		OLED_Clear();
+
+		HAL_ADC_Stop(&hadc1);
 		OLED_ShowString(0,0,"Calibrate ADC1",12);
-		OLED_Refresh();
 		HAL_ADCEx_Calibration_Start(&hadc1);
 		HAL_ADC_Start(&hadc1);
 
 		HAL_ADC_Stop(&hadc2);
 		OLED_ShowString(0,0,"Calibrate ADC2",12);
-		OLED_Refresh();
 		HAL_ADCEx_Calibration_Start(&hadc2);
 		HAL_ADC_Start(&hadc2);
 
