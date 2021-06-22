@@ -39,8 +39,8 @@ CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
  C:/Users/ixuan/CLionProjects/discoTest/Core/Src/main.c
 CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj
- ../Core/Inc/OLED.h
  ../Core/Inc/main.h
+ ../Core/Inc/oled.h
  ../Core/Inc/oledfont.h
  ../Core/Inc/stm32f1xx_hal_conf.h
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h

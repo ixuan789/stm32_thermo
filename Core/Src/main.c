@@ -45,6 +45,9 @@
 ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
 
+TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
+
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
@@ -57,6 +60,7 @@ char DisplayCache2[16];
 char DisplayCache3[16];
 char DisplayCache4[16];
 int frame;
+int Emoji=1;
 int UART=1;
 /* USER CODE END PV */
 
@@ -65,7 +69,9 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
+static void MX_TIM2_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 float GetTemp(float Rt)
 {
@@ -183,8 +189,15 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
+  MX_TIM2_Init();
   MX_USART1_UART_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
+	HAL_TIM_Base_Start_IT(&htim2);
+	HAL_TIM_Base_Start_IT(&htim3);
+	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_3);
+
 	OLED_Init();
 	OLED_DisplayTurn(1);
 	OLED_ShowString(0,0,"Calibrating...",12);
@@ -198,7 +211,7 @@ int main(void)
 	int y=0;
 	int Refresh = 0;
 	HAL_ADCEx_Calibration_Start(&hadc1);
-	HAL_Delay(2000);
+	HAL_Delay(1000);
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_Start(&hadc2);
 
@@ -210,6 +223,8 @@ int main(void)
   while (1)
   {
 
+		TIM2->CCR3 = (int)(-1.40877*(fADValue*10000/(3.3-fADValue)+140877));
+		TIM3->CCR2 = (int)(-1.40877*(fADValue*10000/(3.3-fADValue)+140877));
   	  ADSwitch = HAL_ADC_GetValue(&hadc2);
 
   	  fADValue = 0;
@@ -227,8 +242,22 @@ int main(void)
 	  sprintf(DisplayCache2,"%.3f",fADValue); //Volt
 	  sprintf(DisplayCache3,"%.0f",fADValue*10000/(3.3-fADValue)); //Register
 	  sprintf(DisplayCache4,"%.2f", GetTemp(fADValue/((3.3-fADValue)/10000))); //Temp
-
 	  if(preMode != Mode)	OLED_Clear();
+	  if(ADValue/100 > 1800 && Emoji)
+	  {
+		  OLED_ShowChar(72,0,'(',16);
+		  OLED_ShowChinese(80,0,10,16);
+		  OLED_ShowChar(96,0,'_',16);
+		  OLED_ShowChinese(106,0,10,16);
+		  OLED_ShowChar(122,0,')',16);
+	  }
+	  if(ADValue/100 < 1800 && Emoji)
+	  {
+		  OLED_ShowString(72,0,"(-",16);
+		  OLED_ShowChinese(88,10,10,16);
+		  OLED_ShowString(104,0,"-)",16);
+	  }
+
 	  if(ADSwitch <= 1024)
 	  {
 	  		preMode = Mode;
@@ -406,6 +435,104 @@ static void MX_ADC2_Init(void)
 }
 
 /**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 65535;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
+  HAL_TIM_MspPostInit(&htim2);
+
+}
+
+/**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 0;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 65535;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+  HAL_TIM_MspPostInit(&htim3);
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -453,8 +580,8 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, CS_Pin|DC_Pin|RES_Pin|MOSI_Pin
-                          |SCLK_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, Red_Pin|CS_Pin|DC_Pin|RES_Pin
+                          |MOSI_Pin|SCLK_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : S2_Pin S3_Pin S4_Pin */
   GPIO_InitStruct.Pin = S2_Pin|S3_Pin|S4_Pin;
@@ -462,10 +589,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : CS_Pin DC_Pin RES_Pin MOSI_Pin
-                           SCLK_Pin */
-  GPIO_InitStruct.Pin = CS_Pin|DC_Pin|RES_Pin|MOSI_Pin
-                          |SCLK_Pin;
+  /*Configure GPIO pins : Red_Pin CS_Pin DC_Pin RES_Pin
+                           MOSI_Pin SCLK_Pin */
+  GPIO_InitStruct.Pin = Red_Pin|CS_Pin|DC_Pin|RES_Pin
+                          |MOSI_Pin|SCLK_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -485,9 +612,17 @@ static void MX_GPIO_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 
+	if(GPIO_Pin == S2_Pin)
+	{
+		Emoji = 1-Emoji;
+		OLED_Clear();
+		OLED_Refresh();
+	}
 	if(GPIO_Pin == S3_Pin)
 	{
 		UART = 1-UART;
+		OLED_Clear();
+		OLED_Refresh();
 	}
 	if(GPIO_Pin == S4_Pin)
 	{

@@ -38,8 +38,8 @@ CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj: ../Drivers/STM32F1xx_HAL_Drive
 CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj: ../Core/Src/main.c
 
-CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj: ../Core/Inc/OLED.h
 CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj: ../Core/Inc/main.h
+CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj: ../Core/Inc/oled.h
 CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj: ../Core/Inc/oledfont.h
 CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj: ../Core/Inc/stm32f1xx_hal_conf.h
 CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
