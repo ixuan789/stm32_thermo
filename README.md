@@ -5,7 +5,7 @@
 > Using HAL Library with STM32CubeMX & CLion.
 
 ### Connection:
-- Register:
+- Resister:
   RS -> ADC2_IN0 (PA0)
   NTC -> ADC1_IN1 (PA1)
 - Button:
