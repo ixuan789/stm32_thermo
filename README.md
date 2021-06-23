@@ -5,19 +5,30 @@
 > Using HAL Library with STM32CubeMX & CLion.
 
 ### Connection:
+
 - Resister:
   RS -> ADC2_IN0 (PA0)
+  
   NTC -> ADC1_IN1 (PA1)
+  
 - Button:
   S2 -> PA4 (Emoji)
+  
   S3 -> PA5 (UART)
+  
   S4 -> PA6 (Run Calibration)
+  
 - 0.96 OLED:
   PB3 -> CS
+  
   PB4 -> DC
+  
   PB5 -> RES
+  
   PB6 -> MOSI (D1)
+  
   PB7 -> SCLK (D0)
+  
 - UART1 Transmit.
 
 ### How to use
