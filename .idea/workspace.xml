@@ -11,20 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d315aa3-2c4b-4c44-b88e-91ccbe082dbd" name="Default Changelist" comment="UART Success!">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="2d315aa3-2c4b-4c44-b88e-91ccbe082dbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mxproject" beforeDir="false" afterPath="$PROJECT_DIR$/.mxproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oled.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oled.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Inc/oledfont.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/oledfont.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Core/Src/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/discoTest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/discoTest.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/discoTest.elf.dir/Core/Src/oled.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/discoTest.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/discoTest.elf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/discoTest.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/discoTest.hex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/discoTest.map" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/discoTest.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discoTest.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/discoTest.ioc" afterDir="false" />
     </list>
@@ -103,6 +99,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
@@ -120,16 +117,6 @@
     </key>
   </component>
   <component name="RunManager" selected="OpenOCD Download &amp; Run.OCD discoTest">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="discoTest.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="discoTest" TARGET_NAME="discoTest.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="discoTest" RUN_TARGET_NAME="discoTest.elf">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -152,7 +139,10 @@
       <workItem from="1624262427489" duration="6233000" />
       <workItem from="1624334391129" duration="19114000" />
       <workItem from="1624354187038" duration="11000" />
-      <workItem from="1624359978724" duration="3653000" />
+      <workItem from="1624359978724" duration="8341000" />
+      <workItem from="1624382724283" duration="358000" />
+      <workItem from="1624419519567" duration="1060000" />
+      <workItem from="1624423705756" duration="879000" />
     </task>
     <task id="LOCAL-00001" summary="Debug All Done">
       <created>1624339211903</created>
@@ -182,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624353671792</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ALL Done!">
+      <created>1624363884393</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624363884394</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +199,33 @@
     <MESSAGE value="Debug All Done" />
     <MESSAGE value="Debug Switch Doen" />
     <MESSAGE value="UART Success!" />
-    <option name="LAST_COMMIT_MESSAGE" value="UART Success!" />
+    <MESSAGE value="ALL Done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="ALL Done!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
+          <line>149</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
+          <line>104</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Core/Src/main.c</url>
+          <line>287</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
+        <watch expression="TxCache" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

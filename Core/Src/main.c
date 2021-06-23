@@ -209,7 +209,6 @@ int main(void)
 	float fADValue=0;
 	int i=0;
 	int y=0;
-	int Refresh = 0;
 	HAL_ADCEx_Calibration_Start(&hadc1);
 	HAL_Delay(1000);
 	HAL_ADC_Start(&hadc1);
